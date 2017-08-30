@@ -553,10 +553,11 @@ tx_creator_H = asyncrpcoperation.h \
 
 tx_creator_INCLUDES = -I$(srcdir)/univalue/include
 tx_creator_INCLUDES += -I$(srcdir)/secp256k1/include
+tx_creator_INCLUDES += -I$(srcdir)/support
 tx_creator_INCLUDES += -I$(builddir) -I$(builddir)/obj $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
 tx_creator_SOURCES = dummysender.cpp txcreator.cpp
-tx_creator_CPPFLAGS = $(tx_creator_INCLUDES) $(BITCOIN_INCLUDES)#$(tx_creator_H)
+tx_creator_CPPFLAGS = $(tx_creator_INCLUDES) $(BITCOIN_INCLUDES)
 tx_creator_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 tx_creator_LDADD = $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \

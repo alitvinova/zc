@@ -23,23 +23,7 @@ extern ZCJoinSplit *pzcashParams; // = ZCJoinSplit::Unopened();
 extern BlockMap mapBlockIndex;
 
 extern int find_output(UniValue obj, int n);
-/* {
-    UniValue outputMapValue = find_value(obj, "outputmap");
-    if (!outputMapValue.isArray()) {
-        throw JSONRPCError(RPC_WALLET_ERROR, "Missing outputmap for JoinSplit operation");
-    }
 
-    UniValue outputMap = outputMapValue.get_array();
-    assert(outputMap.size() == ZC_NUM_JS_OUTPUTS);
-    for (size_t i = 0; i < outputMap.size(); i++) {
-        if (outputMap[i].get_int() == n) {
-            return i;
-        }
-    }
-
-    throw std::logic_error("n is not present in outputmap");
-}
-*/
 CSender::CSender(
         std::string fromAddress,
         std::vector<SendManyRecipient> tOutputs,
