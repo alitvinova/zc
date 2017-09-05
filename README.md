@@ -9,7 +9,8 @@ Install dependencies
 ```$ sudo apt-get install \
       build-essential pkg-config libc6-dev m4 g++-multilib \
       autoconf libtool ncurses-dev unzip git python python-zmq \
-      zlib1g-dev wget bsdmainutils automake```
+      zlib1g-dev wget bsdmainutils automake
+```
 
 Check gcc version
 
@@ -18,8 +19,9 @@ gcc/g++ 4.9 or later is required. Currently there is a bug preventing use of gcc
 On Ubuntu Trusty, you can install gcc/g++ 4.9 as follows:
 
 ```$ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-$ sudo apt-get update
-$ sudo apt-get install g++-4.9```
+   $ sudo apt-get update
+   $ sudo apt-get install g++-4.9
+```
 
 Check binutils version
 
@@ -30,9 +32,10 @@ Fetch the software and parameter files
 Fetch our repository with git and run fetch-params.sh like so:
 
 ```$ git clone https://github.com/zcash/zcash.git
-$ cd zcash/
-$ git checkout v1.0.11
-$ ./zcutil/fetch-params.sh```
+   $ cd zcash/
+   $ git checkout v1.0.11
+   $ ./zcutil/fetch-params.sh
+```
 
 2. Скопировать build.sh в zcash/zcutil
    Скопировать остальные файлы в zcash/src
