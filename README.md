@@ -40,7 +40,7 @@ Fetch our repository with git and run fetch-params.sh like so:
 2. Скопировать build.sh в zcash/zcutil
    Скопировать остальные файлы в zcash/src
 
-$ ```./zcutil/build.sh --disable-rust --enable-wallet --disable-zmq -j$(nproc)```
+$ ```./zcutil/build.sh --disable-rust --disable-zmq -j$(nproc)```
 
 3. Для изменения параметров сборки tx_creator редактируем zcash/src/Makefile.am:
 
